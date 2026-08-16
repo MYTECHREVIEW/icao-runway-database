@@ -126,7 +126,7 @@ function ftToM(ft) {
 function parseNum(v) {
     if (v === null || v === undefined || v === '') return null;
     const n = parseFloat(v);
-    return isNaN(n) ? null : Math.round(n * 1000) / 1000;
+    return isNaN(n) ? null : Math.round(n * 10000000) / 10000000; // 7 decimal places = ~1cm precision
 }
 
 function parseIntSafe(v) {
